@@ -1,0 +1,19 @@
+a = imread('selfie.jpg');
+R = a(:,:,1);
+G = a(:,:,2);
+B = a(:,:,3);
+gray = 0.3*R+0.5*G+B*0.2;
+citra1 = gray+80;
+citra2 = gray-80;
+>> doci1 = double(citra1);%merubah citra menjadi double
+>> doci2 = double(citra2);
+>> sobel1 = edge(doci1,'sobel');%memberikan filtering sobel/pendeteksian tepi
+>> sobel2 = edge(doci2,'sobel');
+subplot (2,2,1),imshow(citra1); %subplot membagi tampilan gambar
+title ('citra 2a');
+subplot (2,2,2),imshow(citra2);
+title ('citra 2b');
+subplot (2,2,3),imshow(sobel1);
+title ('sobel 2a');
+subplot (2,2,4),imshow(sobel2);
+title ('sobel 2b');
