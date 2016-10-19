@@ -1,0 +1,12 @@
+citra_double = im2double(gray);% merubah nilai pada citra menjadi nilai double
+citra1 = 2 * log (1+citra_double);
+citra2 = 4 * log (1+citra_double);
+citra3 = 8 * log (1+citra_double);
+subplot (2,2,1),imshow(gray),imhist(gray);
+title ('citra asli');
+subplot (2,2,2),imshow(citra1),imhist (citra1);
+title ('citra 1');
+subplot (2,2,3),imshow(citra2),imhist (citra2);
+title ('citra 2');
+subplot (2,2,4),imshow(citra3),imhist (citra3);
+title ('citra 3');
